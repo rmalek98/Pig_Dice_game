@@ -1,7 +1,15 @@
 'use strict';
 
-// slecting elements
+//add prompt to enter player1 and palyer2 name
+const promptName = function() {
+    let player1 = prompt('Player 1, please enter your name');
+    document.querySelector('#name--0').innerHTML = player1;
+    let player2 = prompt('Player 2, please enter your name');
+    document.querySelector('#name--1').innerHTML = player2;
+};
+promptName();   
 
+// slecting elements
 const player0element = document.querySelector('.player--0');
 const player1element = document.querySelector('.player--1');
 const score0element = document.getElementById('score--0');
@@ -89,6 +97,7 @@ btnNew.addEventListener('click', function() {
     diceEl.classList.add('hidden');
     btnRoll.classList.remove('hidden');
     btnHold.classList.remove('hidden');
+    promptName();  
 });
 
 
