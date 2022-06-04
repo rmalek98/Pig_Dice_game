@@ -13,7 +13,10 @@ const promptName = function() {
         document.querySelector('#name--1').innerHTML = player2;
     }
 };
-promptName();   
+
+setTimeout(function(){ promptName(); }, 5);
+
+ 
 
 // slecting elements
 const player0element = document.querySelector('.player--0');
