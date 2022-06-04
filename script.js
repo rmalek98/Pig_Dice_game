@@ -2,10 +2,16 @@
 
 //add prompt to enter player1 and palyer2 name
 const promptName = function() {
+
     let player1 = prompt('Player 1, please enter your name');
-    document.querySelector('#name--0').innerHTML = player1;
     let player2 = prompt('Player 2, please enter your name');
-    document.querySelector('#name--1').innerHTML = player2;
+    if (player1 === null && player2 === null) {
+        player1 = 'Player 1';
+        player2 = 'Player 2';
+    }else{
+        document.querySelector('#name--0').innerHTML = player1;
+        document.querySelector('#name--1').innerHTML = player2;
+    }
 };
 promptName();   
 
